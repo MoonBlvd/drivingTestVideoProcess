@@ -1,12 +1,9 @@
 function PedestrianTrackingFromMovingCameraExample()
 % Create system objects used for reading video, loading prerequisite data file, detecting pedestrians, and displaying the results.
-videoFile       = 'GRMN0090.MP4';
-imgHeight = 1080;
-bbox = [200, 30, 30, 50; 180, 29, 29, 48; 160, 25, 25, 45];
+videoFile       = 'GRMN0090.mp4';
+scaleDataFile   = 'pedScaleTable.mat'; % An auxiliary file that helps to determine the size of a pedestrian at different pixel locations.
 
-%scaleDataFile   = 'pedScaleTable.mat'; % An auxiliary file that helps to determine the size of a pedestrian at different pixel locations.
-
-scaleDataFile = helperTableOfScales(bbox,imgHeight);
+scaleDataFile = helperTableOf
 
 obj = setupSystemObjects(videoFile, scaleDataFile);
 
